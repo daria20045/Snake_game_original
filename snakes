@@ -8,22 +8,22 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
-#DB By using the arrow keys, you change the direction where the sba
+#DB By using the arrow keys, you change the direction where the snake is heading.
 def change(x, y):
     """Change snake direction."""
     aim.x = x
     aim.y = y
 
-#DB If the snake's head hits the rest of the 
+#DB If the snake's head hits the walls (boundaries) 
 def inside(head):
-    """Return True if head inside boundaries."""
     return -200 < head.x < 190 and -200 < head.y < 190
 
-
+#DB Function that makes the snake move
 def move():
-    """Move snake forward one segment."""
+    #The body of the snake follows its head
     head = snake[-1].copy()
     head.move(aim)
+
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
