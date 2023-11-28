@@ -50,7 +50,7 @@ def move():
     update()
     ontimer(move, 100)
 
-#The initial placement of the snake and food. The angle by which the snakes direction changes when you use the arrows to move it
+#The initial placement of the snake and food. The angle by which the snake's direction changes when you use the arrows to move it
 # is stated.
 setup(420, 420, 370, 0)
 hideturtle()
