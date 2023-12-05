@@ -13,7 +13,7 @@ def change(x, y):
     aim.x = x
     aim.y = y
 
-#DB If the snake's head hits the walls (boundaries) the game ends
+#JM If the snake's head hits the walls (boundaries) the game ends
 def inside(head):
     return -200 < head.x < 190 and -200 < head.y < 190
 
